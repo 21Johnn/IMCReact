@@ -41,7 +41,7 @@ const Form = () =>{
             <div className='result'>
                 {show && <p>Olá {name} seu IMC é {result}</p>}
                 <div className='classes'>
-                    <div className={`caixas baixo ${result < 18.5 ? 'active' : ''}`}><span>Baixo Peso</span></div>
+                    <div className={`caixas baixo ${result < 18.5 && result > 1 ? 'active' : ''}`}><span>Baixo Peso</span></div>
                     <div className={`caixas normal ${result >= 18.5 && result <= 24.9 ? 'active' : ''}`}><span>Peso Normal</span></div>
                     <div className={`caixas sobre ${result >= 25 && result <= 29.9 ? 'active' : ''}`}><span>Sobrepreso</span></div>
                     <div className={`caixas pre ${result >= 30 && result <= 34.9 ? 'active' : ''}`}><span>Pré-Obeso</span></div>
